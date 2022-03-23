@@ -20,11 +20,16 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-        ellipse(xCoordinate1, (float) (HEIGHT * (1.0 / 5)), DIAMETER, DIAMETER);
-        ellipse(xCoordinate1 * 2, (float) (HEIGHT * (2.0 / 5)), DIAMETER, DIAMETER);
-        ellipse(xCoordinate1 * 3, (float) (HEIGHT * (3.0 / 5)), DIAMETER, DIAMETER);
-        ellipse(xCoordinate1 * 4, (float) (HEIGHT * (4.0 / 5)), DIAMETER, DIAMETER);
+        drawCircle(1);
+        drawCircle(2);
+        drawCircle(3);
+        drawCircle(4);
 
+    }
+
+    private void drawCircle(int value) {
+        ellipse(xCoordinate1 * value, (float) (HEIGHT * (value/ 5.0)), DIAMETER, DIAMETER);
         xCoordinate1 += 1;
     }
+
 }
